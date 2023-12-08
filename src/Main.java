@@ -12,7 +12,7 @@ public class Main {
 
             myStamt = myConn.createStatement();
 
-            int rowsAffrected = myStamt.executeUpdate("UPDATE employees " + "set first_name = 'Jose Luis'" + "WHERE id = '2'");
+            int rowsAffrected = myStamt.executeUpdate("DELETE FROM employees " + "WHERE id = '2'");
             myRes = myStamt.executeQuery("SELECT * FROM employees order by first_name");
 
             while (myRes.next()) {
